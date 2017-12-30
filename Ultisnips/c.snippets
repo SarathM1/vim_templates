@@ -5,16 +5,16 @@ snippet fbanner "File banner showing basic info"
 if not snip.c:
 	name = snip.fn
 	snip.rv = ('%s' % (name,))`}
-// Author:
-// Date: ${2:`date +%Y/%m/%d`}
-// Operating Environment: ${3:`lsb_release -d | sed -e 's/Description:\s*//g'`}
-// Compiler with Version Number: gcc (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609
+// Author: ${2:`grep 'Author:\s*' ./metadata.txt | sed -e 's/Author:\s*//g'`}
+// Date: ${3:`date +%Y/%m/%d`}
+// Operating Environment: ${4:`lsb_release -d | sed -e 's/Description:\s*//g'`}
+// Compiler with Version Number: ${5:`gcc --version | head -n 1`}
 // Description:
-// Version:
+// Version: ${6:`grep 'Version:\s*' ./metadata.txt | sed -e 's/Version:\s*//g'`}
 // Last Modified:
 // Section of Design Document:
-// Revisers Name:
-// Review Date:
+// Revisers Name: ${7:`grep 'Revisers Name:\s*' ./metadata.txt | sed -e 's/Revisers Name:\s*//g'`}
+// Review Date: ${8:`grep 'Review Date:\s*' ./metadata.txt | sed -e 's/Review Date:\s*//g'`}
 // Customer Bug No./ CMF No.:
 // Brief description of the fix/enhancement:
 // ***********************************************/
