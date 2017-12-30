@@ -1,22 +1,22 @@
 snippet fbanner "File banner showing basic info"
 //*******************************************
-// Company: Tata Elxsi, Trivandrum
-// File Name: ${1:`!p
+// Company: ${1:Tata Elxsi, Trivandrum}
+// File Name: ${2:`!p
 if not snip.c:
 	name = snip.fn
 	snip.rv = ('%s' % (name,))`}
-// Author: ${2:`grep 'Author:\s*' ./metadata.txt | sed -e 's/Author:\s*//g'`}
-// Date: ${3:`date +%Y/%m/%d`}
-// Operating Environment: ${4:`lsb_release -d | sed -e 's/Description:\s*//g'`}
-// Compiler with Version Number: ${5:`gcc --version | head -n 1`}
-// Description:
-// Version: ${6:`grep 'Version:\s*' ./metadata.txt | sed -e 's/Version:\s*//g'`}
-// Last Modified:
-// Section of Design Document:
-// Revisers Name: ${7:`grep 'Revisers Name:\s*' ./metadata.txt | sed -e 's/Revisers Name:\s*//g'`}
-// Review Date: ${8:`grep 'Review Date:\s*' ./metadata.txt | sed -e 's/Review Date:\s*//g'`}
-// Customer Bug No./ CMF No.:
-// Brief description of the fix/enhancement:
+// Author: ${3:`grep 'Author:\s*' ./metadata.txt | sed -e 's/Author:\s*//g'`}
+// Date: ${4:`date +%Y/%m/%d`}
+// Operating Environment: ${5:`lsb_release -d | sed -e 's/Description:\s*//g'`}
+// Compiler with Version Number: ${6:`gcc --version | head -n 1`}
+// Description: $7
+// Version: ${8:`grep 'Version:\s*' ./metadata.txt | sed -e 's/Version:\s*//g'`}
+// Last Modified: $9
+// Section of Design Document: $10
+// Revisers Name: ${11:`grep 'Revisers Name:\s*' ./metadata.txt | sed -e 's/Revisers Name:\s*//g'`}
+// Review Date: ${12:`grep 'Review Date:\s*' ./metadata.txt | sed -e 's/Review Date:\s*//g'`}
+// Customer Bug No./ CMF No.: $13
+// Brief description of the fix/enhancement: $14
 // ***********************************************/
 $0
 endsnippet
